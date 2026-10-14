@@ -1,0 +1,28 @@
+{
+  "function_bodies_unchanged": true,
+  "functions": {
+    "assemble_scaled_covariance_state": {
+      "function_sha256": "2aec61e4091669e2e6155570acfaf7c52d3a47638637037c363833fe27645962",
+      "source": "reproducibility/code/analysis/mean_domain_rerun_core.py"
+    },
+    "compute_covariance_conditioned": {
+      "function_sha256": "4f11b6fa53d35674db746c97f0fd663b00954379d4a3e2ca0e6bec4406228504",
+      "source": "reproducibility/code/analysis/shared_b0_covariance_sensitivity.py"
+    },
+    "magnitude_mean_correction": {
+      "function_sha256": "5aade16335d64b7278e1c038f0c0155ee37bcfc1740f0648898a70158f4db67f",
+      "source": "reproducibility/code/analysis/mean_domain_rerun_core.py"
+    },
+    "make_qmc_normals": {
+      "function_sha256": "af2a9b733c6d28514f298986ffb29c1c16b163749f755868a0e2f468341ea236",
+      "source": "reproducibility/code/analysis/shared_b0_covariance_sensitivity.py"
+    },
+    "shell_mean_noise_sd": {
+      "function_sha256": "defaabdca3a5bdecbec806643b4d9cb2527a1cf4405a88227ceb328da9375d79",
+      "source": "reproducibility/code/analysis/mean_domain_rerun_core.py"
+    }
+  },
+  "method": "rice_mean_moments + voxel-specific shared-b0 null",
+  "module_sha256": "ed280e85dddcfdafac21c9aadcfac02362196727e0c2dee7b31b2594a5cd836d",
+  "schema_version": 1
+}

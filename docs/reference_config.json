@@ -1,0 +1,49 @@
+{
+  "classification_rule": "eligible AND z_observed < own null median",
+  "classifier": "voxel-specific shared-b0 median-null",
+  "minimum_median_temperature_c": 25.0,
+  "null_factors": 5,
+  "preprocessing_scope": {
+    "estimator": "Exp2",
+    "extent": [
+      5,
+      5,
+      5
+    ],
+    "geometric_preprocessing": "not imposed; native grid",
+    "includes_all_volumes": true,
+    "n4_bias_field": "not imposed; identity",
+    "noise_reference": "MP-PCA input magnitude SD",
+    "nthreads": 1,
+    "volume_drift": "not imposed; all applied factors one"
+  },
+  "primary_region_scope": [
+    "LV",
+    "SA"
+  ],
+  "qmc_powers": {
+    "coarse_power": 12,
+    "final_power": 21,
+    "refined_power": 15,
+    "resolve_power": 19,
+    "ultra_power": 17
+  },
+  "qmc_seeds": [
+    1729,
+    2718,
+    31415,
+    92653,
+    161803,
+    141421,
+    173205
+  ],
+  "refinement_margin": 0.015,
+  "shells_used": [
+    200,
+    500,
+    700,
+    1100
+  ],
+  "signal_correction": "rice_mean_moments",
+  "ultra_margin": 0.002
+}

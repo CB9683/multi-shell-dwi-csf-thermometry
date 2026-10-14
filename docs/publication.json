@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "status": "Manuscript in preparation",
+  "year": 2026,
+  "resource_urls": {
+    "manuscript": null,
+    "supplement": null,
+    "repository": null,
+    "archive": null
+  },
+  "title": "Noise-referenced multi-shell diffusion-weighted imaging for regional cerebrospinal fluid thermometry",
+  "authors": [
+    "Christian Behler",
+    "Michael Breakspear",
+    "Saadallah Ramadan",
+    "Thuy Thanh Dao",
+    "Thomas G. Close",
+    "Sjoerd Vos",
+    "Renate Thienel",
+    "Joseph Giorgio",
+    "Anna Behler",
+    "Michael Fay"
+  ],
+  "corresponding_email": "christian.behler@uon.edu.au",
+  "release_version": "1.1.1",
+  "demonstration": "Supplementary Section S6 and Figure S3"
+}

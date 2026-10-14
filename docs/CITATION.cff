@@ -1,0 +1,37 @@
+cff-version: 1.2.0
+message: "If you use this software or synthetic dataset, cite the archived release and associated manuscript."
+title: "Noise-referenced multi-shell diffusion-weighted imaging for regional cerebrospinal fluid thermometry"
+type: software
+version: 1.1.1
+date-released: 2026-10-14
+license: MIT
+authors:
+  - family-names: Behler
+    given-names: Christian
+  - family-names: Breakspear
+    given-names: Michael
+  - family-names: Ramadan
+    given-names: Saadallah
+  - family-names: Dao
+    given-names: Thuy Thanh
+  - family-names: Close
+    given-names: Thomas G.
+  - family-names: Vos
+    given-names: Sjoerd
+  - family-names: Thienel
+    given-names: Renate
+  - family-names: Giorgio
+    given-names: Joseph
+  - family-names: Behler
+    given-names: Anna
+  - family-names: Fay
+    given-names: Michael
+keywords:
+  - diffusion-weighted imaging
+  - cerebrospinal fluid
+  - thermometry
+  - BIDS
+  - synthetic data
+abstract: >-
+  Software and a synthetic digital reference dataset for noise-aware
+  multi-shell diffusion-weighted imaging thermometry in cerebrospinal fluid.

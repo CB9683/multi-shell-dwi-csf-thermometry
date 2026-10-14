@@ -1,0 +1,19 @@
+name: synthetic-validation
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: mamba-org/setup-micromamba@v2
+        with:
+          environment-file: environment.yml
+          cache-environment: true
+      - run: micromamba install -n csf-thermometry -c conda-forge -c bioconda mrtrix3=3.0.8 -y
+        shell: bash
+      - run: python -m pytest -q tests
+        shell: micromamba-shell {0}

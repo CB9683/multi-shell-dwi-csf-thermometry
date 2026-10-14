@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Noise-referenced multi-shell diffusion-weighted imaging for regional cerebrospinal fluid thermometry | Research companion</title>
+<meta name="description" content="Code, synthetic reference data and reproducibility resources accompanying the regional CSF thermometry manuscript by Behler and colleagues.">
+<style>
+body{margin:0;background:#fff;color:#202124;font:17px/1.55 system-ui,sans-serif}
+main{max-width:1080px;margin:auto;padding:48px 28px}h1{font-size:clamp(32px,5vw,54px);line-height:1.1;margin:12px 0 20px}
+h2{font-size:26px;line-height:1.25;margin:0 0 16px}h3{font-size:18px;margin:0 0 10px}
+a{color:#00618f;text-underline-offset:3px}a:focus-visible{outline:3px solid #00618f;outline-offset:4px}
+small,.muted{color:#5c6168}section{margin-top:40px;scroll-margin-top:24px}p{max-width:82ch}
+nav{display:flex;flex-wrap:wrap;gap:12px 24px;margin:28px 0}nav a{font-size:15px}
+.publication{background:#f5f7f9;border:1px solid #dce1e6;padding:24px;border-radius:8px}
+.publication .status{font-size:14px;margin:0 0 12px}.publication h2{font-size:clamp(23px,3vw,30px)}
+.publication .authors{font-size:16px;margin:0}figure{margin:24px 0}img{display:block;width:100%;height:auto}
+figcaption{font-size:15px;margin-top:12px}.values{display:flex;gap:24px 40px;flex-wrap:wrap;margin:24px 0}
+.values strong{font-size:30px;display:block}.resource-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:16px}
+.resource{border:1px solid #dce1e6;border-radius:6px;padding:18px}.resource p{font-size:15px;margin:0}
+pre{background:#f4f5f6;padding:18px;overflow:auto;font-size:14px;line-height:1.6}code{font-family:ui-monospace,monospace;font-size:.9em}
+.citation{padding:18px;border-left:3px solid #00618f;background:#f5f7f9;font-size:16px}
+footer{border-top:1px solid #ddd;margin-top:36px;padding-top:20px;font-size:15px}
+@media(max-width:600px){main{padding:28px 18px}.publication{padding:18px}section{margin-top:32px}}
+</style></head><body><main><small>REPRODUCIBLE RESEARCH · VERSION 1.1.1</small>
+<h1>Regional CSF thermometry</h1><p>Noise-referenced multi-shell diffusion MRI with a shared-baseline, voxel-specific consistency check.</p>
+<nav aria-label="Page sections"><a href="#publication">Publication</a><a href="#resources">Resources</a><a href="#reproduce">Reproduce</a><a href="#cite">Citation</a><a href="#contact">Contact</a></nav>
+<section id="publication" class="publication" aria-labelledby="publication-title">
+<p class="status">Manuscript in preparation</p><h2 id="publication-title">Noise-referenced multi-shell diffusion-weighted imaging for regional cerebrospinal fluid thermometry</h2><p class="authors">Christian Behler, Michael Breakspear, Saadallah Ramadan, Thuy Thanh Dao, Thomas G. Close, Sjoerd Vos, Renate Thienel, Joseph Giorgio, Anna Behler, Michael Fay</p>
+<p>The manuscript develops a method for separate ventricular and subarachnoid cerebrospinal fluid thermometry. In 12 participants, ventricular diffusion-derived estimates were consistently higher than subarachnoid estimates. Measured image noise provides an internal check of agreement across diffusion weightings.</p>
+<p>This companion provides the code and fully synthetic reference for <strong>Supplementary Section S6 and Figure S3</strong>. It documents a known-input implementation test; it contains no participant MRI or participant-level results.</p>
+</section>
+<section id="synthetic" aria-labelledby="synthetic-title"><h2 id="synthetic-title">A synthetic reference with known temperatures</h2><p>The digital reference programs lateral ventricles (LV) at 38.8 °C and subarachnoid space (SA) at 36.3 °C. The mean-inversion analysis recovers:</p>
+<div class="values"><div><strong style="color:#d55e00">38.798 °C</strong>Lateral ventricles</div><div><strong style="color:#0072b2">36.345 °C</strong>Subarachnoid space</div><div><strong>2.453 °C</strong>LV–SA difference; target 2.50 °C</div></div>
+<figure><img src="synthetic_validation.png" alt="Figure S3: synthetic compartments, cross-shell dispersion, voxel-specific consistency decisions and programmed versus recovered temperatures"><figcaption class="muted"><strong>Figure S3.</strong> The separate shell-inconsistent Other challenge has no passing voxels. These known-input results demonstrate the implementation; they do not establish physiological accuracy.</figcaption></figure>
+<p><a href="synthetic_validation.pdf">View the vector figure</a> · <a href="regional_ground_truth_summary.tsv">Download reference results</a></p>
+</section>
+<section id="resources" aria-labelledby="resources-title"><h2 id="resources-title">Publication and research resources</h2>
+<div class="resource-grid"><article class="resource"><h3>Manuscript</h3><p class="muted">Public manuscript link pending.</p></article>
+<article class="resource"><h3>Supplement</h3><p class="muted">Public supplement link pending.</p></article>
+<article class="resource"><h3>Source code</h3><p class="muted">Repository link pending publication.</p></article>
+<article class="resource"><h3>Versioned data archive</h3><p class="muted">Open Research Newcastle / Figshare DOI pending deposit.</p></article></div>
+<p>Available here: <a href="README.md">full reproduction instructions</a> · <a href="environment.yml">Python environment</a> · <a href="reference_config.json">reference analysis settings</a> · <a href="publication.json">publication metadata</a>.</p>
+</section>
+<section id="reproduce" aria-labelledby="reproduce-title"><h2 id="reproduce-title">Reproduce the calculation</h2>
+<p>Download and extract the code repository or the versioned synthetic archive when its link becomes available. Run the commands below from the extracted package directory. Code, automated tests, numerical provenance and environment configuration are included.</p>
+<p><strong>MRtrix3 3.0.8 is a separate prerequisite for raw-data processing.</strong> The Python environment below does not install it. Follow the <a href="https://www.mrtrix.org/download/">official MRtrix installation instructions</a>, use version 3.0.8 for the reference run, and put <code>dwidenoise</code> on your PATH or set <code>MRTRIX_BIN</code>. The archive also supplies hash-verified preprocessing for numerical replay without rerunning denoising.</p>
+<pre><code>conda env create -f environment.yml
+conda activate csf-thermometry
+
+# Install MRtrix3 3.0.8 separately before make analysis.
+make synthetic
+make analysis
+make control
+make figure
+make test</code></pre>
+<p>The archived acquisition, preprocessing, primary/control outputs and Figure S3 have file checksums. See the <a href="README.md">full instructions</a> for replaying the supplied preprocessing and interpreting the consistency decisions.</p>
+</section>
+<section id="cite" aria-labelledby="cite-title"><h2 id="cite-title">How to cite</h2>
+<p>Cite the associated paper and the specific code/data release as separate resources. Use the public article or preprint citation when available; otherwise identify the manuscript status explicitly.</p>
+<p class="citation">Behler et al. (2026). <em>Noise-referenced multi-shell diffusion-weighted imaging for regional cerebrospinal fluid thermometry</em>. Manuscript in preparation.</p>
+<p class="citation">Behler et al. (2026). <em>Noise-referenced multi-shell diffusion-weighted imaging for regional cerebrospinal fluid thermometry</em>. Software and fully synthetic reference dataset, version 1.1.1. Archive DOI pending deposit.</p>
+<p><a href="CITATION.cff" download>Download the software citation (CITATION.cff)</a>. The final archival citation will include its own DOI.</p>
+</section>
+<section id="contact" aria-labelledby="contact-title"><h2 id="contact-title">Contact</h2>
+<p>Corresponding author: Christian Behler · <a href="mailto:christian.behler@uon.edu.au">christian.behler@uon.edu.au</a>. After repository publication, its issue tracker will also accept code questions and reproducibility reports.</p>
+</section>
+<footer><p>Code: <a href="LICENSE">MIT</a> · Synthetic data, documentation and figures: <a href="DATA_LICENSE.md">CC BY 4.0</a></p><p class="muted">Resource availability is listed above. The released data are fully synthetic.</p></footer>
+</main></body></html>

@@ -1,0 +1,4 @@
+region	label	selection_role	eligible_for_regional_statistics	target_temperature_c	n_total	n_valid	n_retained	retained_fraction	temperature_mean_retained_c	temperature_median_retained_c	temperature_sd_retained_c	mad_median_c	sigma_temperature_rms_median_c	temperature_bias_retained_c
+LV	1	primary regional estimate	True	38.8	744	744	741	0.9959677419354839	38.79814971599453	38.79783075484522	0.050567751088836266	0.011797132788203157	0.1463279763488699	-0.0018502840054637204
+SA	2	primary regional estimate	True	36.3	7698	7698	3068	0.398545076643284	36.345115064148864	36.34329571865162	0.08351548555014898	0.07734335102415457	0.18104074232947934	0.04511506414886668
+Other	3	separate same-rule challenge	False	43.0	816	816	0	0.0				5.494997418190138	0.2887117875754308	

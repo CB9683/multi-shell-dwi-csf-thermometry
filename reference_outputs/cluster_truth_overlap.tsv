@@ -1,0 +1,5 @@
+cluster	cluster_kind	n	n_retained	dominant_truth_region	truth_purity	n_LV	n_SA	n_Other
+0	cluster	816	0	Other	1.0	0	0	816
+1	cluster	7698	3068	SA	1.0	0	7698	0
+2	cluster	372	370	LV	1.0	372	0	0
+3	cluster	372	371	LV	1.0	372	0	0
