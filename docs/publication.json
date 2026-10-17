@@ -5,7 +5,7 @@
   "resource_urls": {
     "manuscript": null,
     "supplement": null,
-    "repository": null,
+    "repository": "https://github.com/CB9683/multi-shell-dwi-csf-thermometry",
     "archive": null
   },
   "title": "Noise-referenced multi-shell diffusion-weighted imaging for regional cerebrospinal fluid thermometry",
@@ -23,5 +23,10 @@
   ],
   "corresponding_email": "christian.behler@uon.edu.au",
   "release_version": "1.1.1",
-  "demonstration": "Supplementary Section S6 and Figure S3"
+  "demonstration": "Supplementary Section S6 and Figure S3",
+  "release_url": "https://github.com/CB9683/multi-shell-dwi-csf-thermometry/releases/tag/v1.1.1",
+  "synthetic_data_url": "https://github.com/CB9683/multi-shell-dwi-csf-thermometry/releases/download/v1.1.1/multi-shell-dwi-csf-thermometry-synthetic-data-v1.1.1.zip",
+  "synthetic_data_sha256": "7337673c0db01bc3d6d2ad8779b1e188defb5e0d19b6f795e730850577f9c9d6",
+  "companion_url": "https://cb9683.github.io/multi-shell-dwi-csf-thermometry/",
+  "public_release_date": "2026-10-18"
 }

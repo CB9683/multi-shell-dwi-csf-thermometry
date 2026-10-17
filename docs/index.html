@@ -33,14 +33,14 @@ footer{border-top:1px solid #ddd;margin-top:36px;padding-top:20px;font-size:15px
 <p><a href="synthetic_validation.pdf">View the vector figure</a> · <a href="regional_ground_truth_summary.tsv">Download reference results</a></p>
 </section>
 <section id="resources" aria-labelledby="resources-title"><h2 id="resources-title">Publication and research resources</h2>
-<div class="resource-grid"><article class="resource"><h3>Manuscript</h3><p class="muted">Public manuscript link pending.</p></article>
-<article class="resource"><h3>Supplement</h3><p class="muted">Public supplement link pending.</p></article>
-<article class="resource"><h3>Source code</h3><p class="muted">Repository link pending publication.</p></article>
-<article class="resource"><h3>Versioned data archive</h3><p class="muted">Open Research Newcastle / Figshare DOI pending deposit.</p></article></div>
+<div class="resource-grid"><article class="resource"><h3>Manuscript</h3><p class="muted">Manuscript in preparation.</p></article>
+<article class="resource"><h3>Supplement</h3><p class="muted">Supplement accompanies the manuscript; Figure S3 is shown above.</p></article>
+<article class="resource"><h3>Source code</h3><a href="https://github.com/CB9683/multi-shell-dwi-csf-thermometry">Browse the code</a></article>
+<article class="resource"><h3>Versioned data archive</h3><a href="https://github.com/CB9683/multi-shell-dwi-csf-thermometry/releases/download/v1.1.1/multi-shell-dwi-csf-thermometry-synthetic-data-v1.1.1.zip">Download synthetic data and outputs (66.3 MB)</a><p><a href="https://github.com/CB9683/multi-shell-dwi-csf-thermometry/releases/download/v1.1.1/multi-shell-dwi-csf-thermometry-synthetic-data-v1.1.1.zip.sha256">SHA-256 checksum</a> · <a href="https://github.com/CB9683/multi-shell-dwi-csf-thermometry/releases/tag/v1.1.1">Release notes</a></p></article></div>
 <p>Available here: <a href="README.md">full reproduction instructions</a> · <a href="environment.yml">Python environment</a> · <a href="reference_config.json">reference analysis settings</a> · <a href="publication.json">publication metadata</a>.</p>
 </section>
 <section id="reproduce" aria-labelledby="reproduce-title"><h2 id="reproduce-title">Reproduce the calculation</h2>
-<p>Download and extract the code repository or the versioned synthetic archive when its link becomes available. Run the commands below from the extracted package directory. Code, automated tests, numerical provenance and environment configuration are included.</p>
+<p>Download and extract the <a href="https://github.com/CB9683/multi-shell-dwi-csf-thermometry/archive/refs/tags/v1.1.1.zip">versioned source code</a> or the <a href="https://github.com/CB9683/multi-shell-dwi-csf-thermometry/releases/download/v1.1.1/multi-shell-dwi-csf-thermometry-synthetic-data-v1.1.1.zip">synthetic archive</a>. Run the commands below from the extracted package directory. Code, automated tests, numerical provenance and environment configuration are included.</p>
 <p><strong>MRtrix3 3.0.8 is a separate prerequisite for raw-data processing.</strong> The Python environment below does not install it. Follow the <a href="https://www.mrtrix.org/download/">official MRtrix installation instructions</a>, use version 3.0.8 for the reference run, and put <code>dwidenoise</code> on your PATH or set <code>MRTRIX_BIN</code>. The archive also supplies hash-verified preprocessing for numerical replay without rerunning denoising.</p>
 <pre><code>conda env create -f environment.yml
 conda activate csf-thermometry
@@ -56,11 +56,11 @@ make test</code></pre>
 <section id="cite" aria-labelledby="cite-title"><h2 id="cite-title">How to cite</h2>
 <p>Cite the associated paper and the specific code/data release as separate resources. Use the public article or preprint citation when available; otherwise identify the manuscript status explicitly.</p>
 <p class="citation">Behler et al. (2026). <em>Noise-referenced multi-shell diffusion-weighted imaging for regional cerebrospinal fluid thermometry</em>. Manuscript in preparation.</p>
-<p class="citation">Behler et al. (2026). <em>Noise-referenced multi-shell diffusion-weighted imaging for regional cerebrospinal fluid thermometry</em>. Software and fully synthetic reference dataset, version 1.1.1. Archive DOI pending deposit.</p>
+<p class="citation">Behler et al. (2026). <em>Noise-referenced multi-shell diffusion-weighted imaging for regional cerebrospinal fluid thermometry</em>. Software and fully synthetic reference dataset, version 1.1.1. <a href="https://github.com/CB9683/multi-shell-dwi-csf-thermometry/releases/tag/v1.1.1">GitHub release v1.1.1</a>. Archive DOI pending deposit.</p>
 <p><a href="CITATION.cff" download>Download the software citation (CITATION.cff)</a>. The final archival citation will include its own DOI.</p>
 </section>
 <section id="contact" aria-labelledby="contact-title"><h2 id="contact-title">Contact</h2>
-<p>Corresponding author: Christian Behler · <a href="mailto:christian.behler@uon.edu.au">christian.behler@uon.edu.au</a>. After repository publication, its issue tracker will also accept code questions and reproducibility reports.</p>
+<p>Corresponding author: Christian Behler · <a href="mailto:christian.behler@uon.edu.au">christian.behler@uon.edu.au</a>. For code questions and reproducibility reports, use the <a href="https://github.com/CB9683/multi-shell-dwi-csf-thermometry/issues">issue tracker</a>.</p>
 </section>
 <footer><p>Code: <a href="LICENSE">MIT</a> · Synthetic data, documentation and figures: <a href="DATA_LICENSE.md">CC BY 4.0</a></p><p class="muted">Resource availability is listed above. The released data are fully synthetic.</p></footer>
 </main></body></html>

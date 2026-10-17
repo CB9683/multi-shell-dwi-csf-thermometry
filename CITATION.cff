@@ -1,10 +1,12 @@
 cff-version: 1.2.0
-message: "If you use this software or synthetic dataset, cite the archived release and associated manuscript."
+message: "If you use this software or synthetic dataset, cite this release and the associated manuscript."
 title: "Noise-referenced multi-shell diffusion-weighted imaging for regional cerebrospinal fluid thermometry"
 type: software
 version: 1.1.1
-date-released: 2026-10-14
+date-released: 2026-10-18
 license: MIT
+repository-code: https://github.com/CB9683/multi-shell-dwi-csf-thermometry
+url: https://github.com/CB9683/multi-shell-dwi-csf-thermometry/releases/tag/v1.1.1
 authors:
   - family-names: Behler
     given-names: Christian

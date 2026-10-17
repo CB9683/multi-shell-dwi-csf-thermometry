@@ -12,9 +12,20 @@ demonstration in Supplementary Section S6 and Figure S3. The manuscript
 reports separate ventricular/subarachnoid measurements in 12 participants;
 the released data are fully synthetic.
 
-Publication and resource links are recorded in `docs/publication.json`.
-Pending links have no invented journal citation or DOI. For correspondence:
-christian.behler@uon.edu.au.
+For correspondence: christian.behler@uon.edu.au.
+
+## Download
+
+- [Project companion](https://cb9683.github.io/multi-shell-dwi-csf-thermometry/)
+- [Source code and release v1.1.1](https://github.com/CB9683/multi-shell-dwi-csf-thermometry/releases/tag/v1.1.1)
+- [Synthetic acquisition and reference outputs (66.3 MB)](https://github.com/CB9683/multi-shell-dwi-csf-thermometry/releases/download/v1.1.1/multi-shell-dwi-csf-thermometry-synthetic-data-v1.1.1.zip)
+- [Archive SHA-256 checksum](https://github.com/CB9683/multi-shell-dwi-csf-thermometry/releases/download/v1.1.1/multi-shell-dwi-csf-thermometry-synthetic-data-v1.1.1.zip.sha256)
+
+The synthetic archive includes the acquisition, reference preprocessing,
+primary/control outputs, Figure S3, source and tests. The 14 October source
+snapshot inside the archive is preserved; this repository adds the public
+download links. Numerical code and reference results are identical.
+Publication and resource metadata are in `docs/publication.json`.
 
 ![Synthetic demonstration](docs/synthetic_validation.png)
 
@@ -96,11 +107,10 @@ Please cite the associated paper and the version of the code/data you used
 as separate resources. While the manuscript is in preparation, identify its
 status explicitly; replace this with the public article/preprint citation
 when available. `CITATION.cff` supplies software-release citation metadata.
-The repository
-URL and Open Research Newcastle/Figshare DOI will be added when the reviewed
-release is deposited. A reserved DOI/private reviewer link can be used before
-public release. Participant MRI and participant-derived tables are outside
-this synthetic-only package; their access statement is separate.
+The code and synthetic reference are available from the versioned GitHub
+release linked above. An archival DOI will be added after deposit.
+Participant MRI and participant-derived tables have a separate access
+statement in the manuscript.
 
 Code: MIT. Synthetic data, documentation and figures: CC BY 4.0.
 See `LICENSE` and `DATA_LICENSE.md`.
